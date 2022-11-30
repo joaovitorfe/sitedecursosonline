@@ -1,0 +1,25 @@
+<script id="Handlebars-Template" type="text/x-handlebars-template">
+    <div id="Content">
+      <h1>&Xi;RecipeCards 
+        <span id='BOS'>Recipe search powered by 
+            <a id='Logo' href=''>
+                <img src=''/>
+            </a>
+        </span>
+      </h1>
+      {{#each Recipes}}
+        <div class='Box'>
+            <img class='Thumb' src="{{{video}}}" alt="{{Name}}">
+            <h3>{{Name}} <a id='Logo' href="{{Source.Url}}"> - {{Source.Name}}</a></h3>
+            <h5>{{getFlavor Flavors}}</h5>
+            <h5>{{Yield}}</h5>
+            <p></p>
+            <ul>
+                {{#each Ingredients}}
+                    <li>{{this}}</li>
+                {{/each}}
+            </ul>
+        </div>
+      {{/each}}
+    </div>
+</script>
